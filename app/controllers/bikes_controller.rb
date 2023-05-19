@@ -11,11 +11,11 @@ class BikesController < ApplicationController
 
   def create
     @bike = Bike.create(
-      name: parmas[:bike][:name],
-      color: params[:bike][:color],
-      price: params[bike][:price],
+      name: params[:name],
+      color: params[:color],
+      price: params[:price],
     )
-    redirect_to "/bikes"
+    render :show
   end
   
   
