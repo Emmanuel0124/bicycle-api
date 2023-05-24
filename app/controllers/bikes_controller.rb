@@ -18,5 +18,9 @@ class BikesController < ApplicationController
     render :show
   end
   
+  def show
+    @bike = Bike.find_by(id: params[:id])
+    render :show
+  end
   
 end
